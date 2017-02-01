@@ -1,21 +1,22 @@
 <?php
 
-  class humain{
+include_once ("config/conf.php");
 
-    private $_nom;
-    private $_prenom;
-    private $_age;
-    private $_adresse;
-    private $_telephone;
+class humain extends Connection{
 
+    public function test($login) {
 
+// test de co
 
-    function __construct()
-    {
-        $this->_nom = "toto";
-    }
+      $connection = new Connection();
+      $sql="SELECT * FROM categorie";
+      $result= $connection->select($sql);
+      foreach ($result as $row)
+      {
+          echo $row['description'].'<br>';
+      }
+      echo ($login);
 
-  }
-
-
+        }
+}
 ?>
