@@ -20,7 +20,6 @@
 
 <!-- PHP ICI -->
 
-
 <?php
 /**
   GESTION DES INCLUDES
@@ -32,10 +31,10 @@ include_once ("config/conf.php");
   /**
    ATTRIBUTION DES VALEURS POST
    */
-  $nom = $_POST['Nom'];
-  $prenom = $_POST['Prenom'];
-  $keyUser = $_POST['KeyUser'];
-  $act = $_POST["act"];
+  $nom      = $_POST['Nom'];
+  $prenom   = $_POST['Prenom'];
+  $keyUser  = $_POST['KeyUser'];
+  $act      = $_POST["act"];
 
 /**
   VERIFICATION DES VALEURS ET UP DANS LA BDD
