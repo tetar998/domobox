@@ -1,22 +1,25 @@
+
+
 <?php
 
   include("user.php");
 
-$connection = new Connection();
-$query = 'SELECT * FROM user';
-$result= $connection->select($query);
+  $connection = new Connection();
+  $query = 'SELECT * FROM user';
+  $result= $connection->select($query);
 
-  $tmp = "fuck les nains";
-  echo json_encode($tmp);
-  echo "titi";
-  print_r($result);
+  $act = $_GET["act"];
+
+  if ($act != "add_user"){
+      echo ("toto");
+  }else{
+    header("Location: user.php");
+    exit;
+  }
+
 
   // test de creation de la class humain et de tetar avec different attribu
   // TODO creer les different attribu + creer les fichier de conf pour les phrases
-  $tetar = new humain();
-  $tetar->test("azerty");
-  $tetar->test("zaeknazlkenzaelnazelkzelkjzaeklajzeklazjeklazjeklazej");
-
-  print_r($arr);
+  //
 
 ?>
